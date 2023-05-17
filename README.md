@@ -27,7 +27,7 @@ The website is developed using the following technologies, frameworks, and tools
 To run the website locally, follow these steps:
 
 1. Clone this repository: `git clone https://github.com/olavgit/crftd-website.git`
-2. Navigate to the project directory: `cd your-repo`
+2. Navigate to the project directory: `cd crftd-website`
 3. Install the project dependencies:
     - If you use npm: `npm install`
     - If you use Yarn: `yarn install`
