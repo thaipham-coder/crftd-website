@@ -7,15 +7,15 @@ module.exports = {
   ],
   theme: {
     extend: {
-        fontFamily: {
-            archia: ['var(--font-archia)'],
-            sans: ['var(--font-tthoves)'],
-        },
-        colors: {
-            'crftd-purple': '#9B91FA',
-            'crftd-gray': '#707070',
-            'crftd-white': '#F2F2F2',
-        },
+      fontFamily: {
+        archia: ['var(--font-archia)'],
+        sans: ['var(--font-tthoves)'],
+      },
+      colors: {
+        'crftd-purple': '#9B91FA',
+        'crftd-gray': '#707070',
+        'crftd-white': '#F2F2F2',
+      },
     },
   },
   plugins: [],

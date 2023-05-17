@@ -1,9 +1,9 @@
 ```
-                ___  __       __     
-              /'___\/\ \__   /\ \    
-  ___   _ __ /\ \__/\ \ ,_\  \_\ \   
- /'___\/\`'__\ \ ,__\\ \ \/  /'_` \  
-/\ \__/\ \ \/ \ \ \_/ \ \ \_/\ \L\ \ 
+                ___  __       __
+              /'___\/\ \__   /\ \
+  ___   _ __ /\ \__/\ \ ,_\  \_\ \
+ /'___\/\`'__\ \ ,__\\ \ \/  /'_` \
+/\ \__/\ \ \/ \ \ \_/ \ \ \_/\ \L\ \
 \ \____\\ \_\  \ \_\   \ \__\ \___,_\
  \/____/ \/_/   \/_/    \/__/\/__,_ /
 ```
@@ -29,13 +29,13 @@ To run the website locally, follow these steps:
 1. Clone this repository: `git clone https://github.com/olavgit/crftd-website.git`
 2. Navigate to the project directory: `cd crftd-website`
 3. Install the project dependencies:
-    - If you use npm: `npm install`
-    - If you use Yarn: `yarn install`
-    - If you use pnpm: `pnpm install`
+   - If you use npm: `npm install`
+   - If you use Yarn: `yarn install`
+   - If you use pnpm: `pnpm install`
 4. Run the development server:
-    - If you use npm: `npm run dev`
-    - If you use Yarn: `yarn dev`
-    - If you use pnpm: `pnpm dev`
+   - If you use npm: `npm run dev`
+   - If you use Yarn: `yarn dev`
+   - If you use pnpm: `pnpm dev`
 5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Contact
