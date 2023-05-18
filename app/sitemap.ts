@@ -1,5 +1,5 @@
 export default async function sitemap() {
-  const routes = ['', '/about', '/contact'].map((route) => ({
+  const routes = ['', '/cases', '/about', '/contact', '/qr'].map((route) => ({
     url: `https://www.crftd.nl${route}`,
     lastModified: new Date().toISOString(),
   }))

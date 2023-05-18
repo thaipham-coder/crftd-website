@@ -10,16 +10,21 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
 
+/**
+ * A component that creates a custom cursor element that follows the cursor around the screen.
+ * It provides interactive animations based on the cursor's interaction with elements.
+ */
+
 export default function CustomCursor() {
   const trailerRef = useRef<HTMLDivElement>(null)
 
   useIsomorphicLayoutEffect(() => {
     if (ScrollTrigger.isTouch) return
     const ctx = gsap.context(() => {
-      // Set's the initial position of the trailer to the center of the screen
+      // Set the initial position of the trailer to the center of the screen.
       gsap.set(trailerRef.current, { xPercent: -50, yPercent: -50 })
 
-      // Different tweens that set the position, size and opacity of the trailer, icon and shadow
+      // Define tweens that control the position, size and opacity of the trailer, icon and shadow.
       const oTo = gsap.quickTo(trailerRef.current, 'opacity', {
           duration: 0.4,
           ease: 'power3.out',
@@ -53,7 +58,7 @@ export default function CustomCursor() {
           ease: 'power3.out',
         })
 
-      // The animation that plays when the cursor is not interacting with anything
+      // Define the animation that plays when the cursor is not interacting with anything.
       const animate = (e: MouseEvent) => {
         const xOffset = window.innerWidth / 2,
           yOffset = window.innerHeight / 2,
@@ -73,7 +78,7 @@ export default function CustomCursor() {
         oTo(1)
       })
 
-      // The animation that plays when the cursor is interacting with something
+      // Define the animation that plays when the cursor is interacting with something.
       window.addEventListener('mousemove', (e: MouseEvent) => {
         const interactable = (e.target as HTMLElement)?.closest('.ia')
         animate(e)
@@ -113,7 +118,7 @@ export default function CustomCursor() {
       <Image
         id="icon"
         src={arrowIcon}
-        alt="right arrow icon"
+        alt="arrow right icon"
         className="will-change-transform"
       />
       <div

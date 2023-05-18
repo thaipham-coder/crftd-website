@@ -2,9 +2,9 @@ import './globals.css'
 import { Analytics } from '@vercel/analytics/react'
 import localFont from 'next/font/local'
 import CustomCursor from '@/components/common/customCursor'
-import Navbar from '@/components/layout/navbar/navbar'
 import SmoothScroller from '@/components/common/smoothScroller'
-import Footer from '@/components/layout/footer/footer'
+import Footer from '@/components/layout/footer'
+import Navbar from '@/components/layout/navbar'
 
 const archia = localFont({
   src: [
@@ -44,7 +44,7 @@ export default function RootLayout({
       <body>
         <CustomCursor />
         <SmoothScroller>
-            <Navbar />
+          <Navbar />
           {children}
           <Footer />
         </SmoothScroller>
