@@ -1,8 +1,9 @@
 import './globals.css'
 import { Analytics } from '@vercel/analytics/react'
 import localFont from 'next/font/local'
-import Navbar from '@/components/layout/navbar/navbar'
 import CustomCursor from '@/components/common/customCursor'
+import Navbar from '@/components/layout/navbar/navbar'
+import SmoothScroller from '@/components/common/smoothScroller'
 import Footer from '@/components/layout/footer/footer'
 
 const archia = localFont({
@@ -42,11 +43,13 @@ export default function RootLayout({
     <html lang="en" className={`${archia.variable} ${tthoves.variable}`}>
       <body>
         <CustomCursor />
-        <Navbar />
-        {children}
-        <Analytics />
-        <Footer />
+        <SmoothScroller>
+            <Navbar />
+          {children}
+          <Footer />
+        </SmoothScroller>
       </body>
+      <Analytics />
     </html>
   )
 }

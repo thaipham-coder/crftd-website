@@ -66,7 +66,7 @@ export default function CustomCursor() {
         ihTo(0)
         iwTo(0)
         sTo(0)
-        document.body.style.cursor = 'default'
+        document.body.style.cursor = 'auto'
       }
 
       window.addEventListener('mouseover', () => {
