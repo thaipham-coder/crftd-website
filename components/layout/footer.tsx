@@ -31,6 +31,7 @@ export default function Footer() {
         },
       })
 
+      gsap.set('footer .reveal', { opacity: 1 })
       const targets = gsap.utils.toArray('footer .reveal') as gsap.DOMTarget[]
       targets.forEach((target) => {
         const childSplit = new SplitText(target, {
@@ -64,7 +65,7 @@ export default function Footer() {
       <div className="container mx-auto px-8 md:px-4">
         <div className="md:mb-18 -mx-4 mb-12 flex flex-wrap justify-between xl:mb-24">
           <div className="mb-12 w-full px-4 md:mb-0 md:w-5/12">
-            <Link href="/">
+            <Link href="/" aria-label="Link to home page">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 id="crftd"
