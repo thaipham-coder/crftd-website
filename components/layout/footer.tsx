@@ -7,7 +7,7 @@ import LiveClock from '@/components/common/liveClock'
 import ScrollToTop from '@/components/common/scrollToTop'
 import useIsomorphicLayoutEffect from '@/components/helpers/isomorphicEffect'
 
-import { useEffect, useRef } from 'react'
+import { useRef } from 'react'
 import { gsap } from 'gsap'
 import { SplitText } from 'gsap/SplitText'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'

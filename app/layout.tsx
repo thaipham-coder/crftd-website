@@ -32,6 +32,7 @@ export const metadata = {
   title: 'Crafted Digital Agency',
   description:
     "Crafted is a leading digital agency dedicated to delivering iconic brands and digital experiences. Unlock the power of innovation as we craft tomorrow's digital products today.",
+  themeColor: '#000000',
 }
 
 export default function RootLayout({
