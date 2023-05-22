@@ -6,10 +6,10 @@ export default function Home() {
       {/*<Preloader />*/}
       <h1>Home</h1>
       <div data-type="link" className="ia h-20 w-20 bg-pink-500">
-        hoi ik ben link
+        hover me (link)
       </div>
       <div data-type="button" className="ia h-20 w-20 bg-green-500">
-        hoi ik ben button
+        hover me (button)
       </div>
     </main>
   )

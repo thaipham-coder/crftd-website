@@ -18,6 +18,8 @@ export default function Footer() {
   const el = useRef<HTMLDivElement>(null)
 
   useIsomorphicLayoutEffect(() => {
+    let handleResize: () => void
+
     const ctx = gsap.context(() => {
       gsap.from('#crftd path', {
         yPercent: 100,
@@ -31,31 +33,59 @@ export default function Footer() {
         },
       })
 
-      gsap.set('footer .reveal', { opacity: 1 })
-      const targets = gsap.utils.toArray('footer .reveal') as gsap.DOMTarget[]
-      targets.forEach((target) => {
-        const childSplit = new SplitText(target, {
-          type: 'lines',
-          linesClass: 'lc',
+      let childSplits: SplitText[] = []
+      let parentSplits: SplitText[] = []
+
+      function init() {
+        gsap.set('footer .reveal', { autoAlpha: 1 })
+        const targets = gsap.utils.toArray('footer .reveal') as gsap.DOMTarget[]
+        targets.forEach((target) => {
+          const childSplit = new SplitText(target, {
+            type: 'lines',
+            linesClass: 'lc',
+          })
+
+          const parentSplit = new SplitText(target, {
+            type: 'lines',
+            linesClass: 'lp',
+          })
+
+          childSplits.push(childSplit)
+          parentSplits.push(parentSplit)
+
+          gsap.from(childSplit.lines, {
+            yPercent: 100,
+            stagger: 0.18,
+            duration: 0.6,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: target,
+              start: 'top 80%',
+              toggleActions: 'play none none reverse',
+            },
+          })
         })
-        const parentSplit = new SplitText(target, {
-          type: 'lines',
-          linesClass: 'lp',
-        })
-        gsap.from(childSplit.lines, {
-          yPercent: 100,
-          stagger: 0.18,
-          duration: 0.6,
-          ease: 'power3.out',
-          scrollTrigger: {
-            trigger: target,
-            start: 'top 80%',
-            toggleActions: 'play none none reverse',
-          },
-        })
-      })
+      }
+
+      let timeout: NodeJS.Timeout | undefined
+
+      handleResize = () => {
+        gsap.set('footer .reveal', { autoAlpha: 0 })
+        clearTimeout(timeout)
+        parentSplits.forEach((split) => split.revert())
+        childSplits.forEach((split) => split.revert())
+        parentSplits = []
+        childSplits = []
+        timeout = setTimeout(init, 250)
+      }
+
+      window.addEventListener('resize', handleResize)
+      init()
     }, el)
-    return () => ctx.revert()
+    return () => {
+      window.removeEventListener('resize', handleResize)
+      ctx.revert()
+    }
   }, [])
   return (
     <footer

@@ -13,6 +13,12 @@ gsap.registerPlugin(ScrollTrigger)
 /**
  * A component that creates a custom cursor element that follows the cursor around the screen.
  * It provides interactive animations based on the cursor's interaction with elements.
+ *
+ * Example usage for the cursor to grow on hover:
+ * <div data-type="link" className="ia">{content}</div>
+ *
+ * Example usage for the cursor to disappear on hover:
+ * <div data-type="button" className="ia">{content}</div>
  */
 
 export default function CustomCursor() {
