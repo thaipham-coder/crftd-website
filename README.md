@@ -10,6 +10,9 @@
 
 This repository contains the source code and assets for the official website of Crafted Digital Agency.
 
+> **🚧 &nbsp;Attention: Under construction! &nbsp;🚧**<br>
+> Please be aware that we're currently hard at work, but the finish line is still a distance away. This means our website might not function as expected during this phase of development.
+
 ## Technologies Used
 
 The website is developed using the following technologies, frameworks, and tools:
