@@ -119,7 +119,7 @@ export default function CustomCursor() {
   return (
     <div
       ref={trailerRef}
-      className="pointer-events-none invisible fixed left-1/2 top-1/2 z-[48] flex items-center justify-center rounded-full bg-crftd-purple opacity-0 will-change-transform md:visible"
+      className="pointer-events-none invisible fixed left-1/2 top-1/2 z-40 flex items-center justify-center rounded-full bg-crftd-purple opacity-0 will-change-transform md:visible"
     >
       <Image
         id="icon"

@@ -9,18 +9,18 @@ import { useEffect, useState } from 'react'
 const DynamicClock = dynamic(() => import('react-live-clock'), { ssr: false })
 
 export default function LiveClock() {
-    const [shouldRender, setShouldRender] = useState(false)
+  const [shouldRender, setShouldRender] = useState(false)
 
-    useEffect(() => {
-        setShouldRender(true)
-    }, [])
+  useEffect(() => {
+    setShouldRender(true)
+  }, [])
 
-    return shouldRender ? (
-        <DynamicClock
-            format={'LT'}
-            ticking={true}
-            timezone={'Europe/Amsterdam'}
-            className="lowercase"
-        />
-    ) : null
+  return shouldRender ? (
+    <DynamicClock
+      format={'LT'}
+      ticking={true}
+      timezone={'Europe/Amsterdam'}
+      className="lowercase"
+    />
+  ) : null
 }
