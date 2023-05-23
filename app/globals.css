@@ -4,6 +4,7 @@
 
 .reveal {
   opacity: 0;
+  visibility: hidden;
 }
 
 .lp {
