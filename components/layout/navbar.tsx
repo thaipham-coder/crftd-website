@@ -42,8 +42,8 @@ export default function Navbar() {
             <Link href="/" aria-label="Link to home page">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="96"
-                height="64"
+                width="72"
+                height="48"
                 viewBox="0 0 96 64"
               >
                 <g id="emblem">

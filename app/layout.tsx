@@ -19,6 +19,11 @@ const archia = localFont({
 
 const tthoves = localFont({
   src: [
+      {
+          path: '../public/fonts/tthoves-bold.woff2',
+          weight: '700',
+          style: 'normal',
+      },
     {
       path: '../public/fonts/tthoves-regular.woff2',
       weight: '400',

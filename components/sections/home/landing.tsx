@@ -2,7 +2,7 @@ export default function Landing() {
   return (
     <section className="bg-black text-crftd-white">
       <div className="container mx-auto px-8 md:px-4">
-        <div className="-mx-4 flex min-h-[50vh] flex-wrap items-end pb-8 md:pb-16">
+        <div className="-mx-4 flex min-h-[60vh] flex-wrap items-end pb-8 md:pb-16">
           <div className="w-full px-4 md:w-7/12">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -43,6 +43,7 @@ export default function Landing() {
               <iframe
                 src="https://player.vimeo.com/video/829920535?controls=0&autoplay=1&loop=1&muted=1&title=0&autopause=0&background=1"
                 className="pointer-events-none h-full w-full"
+                loading="eager"
                 allowFullScreen
               />
             </div>

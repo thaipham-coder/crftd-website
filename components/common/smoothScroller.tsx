@@ -69,7 +69,7 @@ export default function SmoothScroller({
     return () => ctx.current.revert()
   }, [pathname])
   return (
-    <div id="smooth-wrapper">
+    <div id="smooth-wrapper" className="bg-black">
       <div id="smooth-content" className="will-change-transform">
         {children}
       </div>
