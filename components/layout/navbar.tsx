@@ -16,14 +16,13 @@ export default function Navbar() {
     const ctx = gsap.context(() => {
       const anim = gsap.from(hdr.current, {
         autoAlpha: 0,
-        paused: true,
         duration: 0.4,
-        ease: 'power3.out',
+        ease: 'power2.inOut',
       })
 
       ScrollTrigger.create({
-        start: 'top top',
-        end: 99999,
+        start: 'top+=160',
+        end: 'bottom bottom',
         onUpdate: (self) => {
           self.direction === -1 ? anim.play() : anim.reverse()
         },
@@ -86,7 +85,7 @@ export default function Navbar() {
             </Link>
           </div>
           <nav className="pointer-events-auto px-4">
-            <ul className="flex gap-8">
+            <ul className="hidden gap-8 md:flex">
               <li>
                 <Link
                   href="/cases"
@@ -115,6 +114,7 @@ export default function Navbar() {
                 </Link>
               </li>
             </ul>
+            <button className="flex md:hidden">hamburger</button>
           </nav>
         </div>
       </div>

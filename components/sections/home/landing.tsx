@@ -1,8 +1,31 @@
+'use client'
+
+import { useRef } from 'react'
+import useIsomorphicLayoutEffect from '@/components/helpers/isomorphicEffect'
+import { gsap } from 'gsap'
+
 export default function Landing() {
+  const el = useRef<HTMLDivElement>(null)
+
+  useIsomorphicLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from('#crftd path', {
+        yPercent: 110,
+        stagger: 0.06,
+        duration: 1,
+        delay: 1,
+        ease: 'power3.out',
+      })
+    }, el)
+    return () => ctx.revert()
+  }, [])
   return (
-    <section className="bg-black text-crftd-white">
+    <section
+      ref={el}
+      className="flex min-h-[60vh] items-end bg-black pb-8 text-crftd-white md:pb-16"
+    >
       <div className="container mx-auto px-8 md:px-4">
-        <div className="-mx-4 flex min-h-[60vh] flex-wrap items-end pb-8 md:pb-16">
+        <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4 md:w-7/12">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -35,18 +58,6 @@ export default function Landing() {
                 fill="#f2f2f2"
               />
             </svg>
-          </div>
-        </div>
-        <div className="-mx-4 flex flex-wrap">
-          <div className="w-full px-4">
-            <div className="aspect-video">
-              <iframe
-                src="https://player.vimeo.com/video/829920535?controls=0&autoplay=1&loop=1&muted=1&title=0&autopause=0&background=1"
-                className="pointer-events-none h-full w-full"
-                loading="eager"
-                allowFullScreen
-              />
-            </div>
           </div>
         </div>
       </div>

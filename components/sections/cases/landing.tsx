@@ -1,8 +1,8 @@
 export default function Landing() {
   return (
-    <section className="bg-black min-h-[50vh] flex items-end pb-16 md:pb-24 xl:pb-32 text-crftd-white">
+    <section className="flex min-h-[50vh] items-end bg-black pb-16 text-crftd-white md:pb-24 xl:pb-32">
       <div className="container mx-auto px-8 md:px-4">
-        <div className="-mx-4 flex flex-wrap justify-center items-end gap-8 md:gap-0 ">
+        <div className="-mx-4 flex flex-wrap items-end justify-center gap-8 md:gap-0">
           <div className="w-full px-4 md:w-5/12">
             <h1 className="font-archia text-6xl lowercase">
               Small actions with a huge impact
