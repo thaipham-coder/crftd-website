@@ -1,6 +1,4 @@
-import Image, {StaticImageData} from "next/image";
-
-export default function ContainerImage(props: { src: StaticImageData, alt: string, bg?: string, padding?: string }) {
+export default function Description(props: { bg?: string, padding?: string }) {
     let bg = ''
     let padding = ''
 
@@ -36,8 +34,14 @@ export default function ContainerImage(props: { src: StaticImageData, alt: strin
     return (
         <section className={className}>
             <div className="container mx-auto px-8 md:px-4">
-                <div className="overflow-hidden aspect-video">
-            <Image src={props.src} alt={props.alt} data-speed="auto"/>
+                <div className="-mx-4 flex flex-wrap justify-center">
+                    <div className="w-full px-4 md:w-10/12">
+                        <h3 className="font-archia text-3xl lowercase leading-tight md:leading-tight md:text-6xl">
+                            with this fictional, hybrid body care brand, we show a conceivable
+                            evolution from consumer brands to platforms that bring together
+                            different products and services under one name.
+                        </h3>
+                    </div>
                 </div>
             </div>
         </section>
