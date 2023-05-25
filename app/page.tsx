@@ -1,15 +1,11 @@
 import Preloader from '@/components/common/preloader'
+import Landing from '@/components/sections/home/landing'
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black">
+    <main>
       {/*<Preloader />*/}
-      <div data-type="link" className="ia h-20 w-20 bg-pink-500">
-        hover me (link)
-      </div>
-      <div data-type="button" className="ia h-20 w-20 bg-green-500">
-        hover me (button)
-      </div>
+      <Landing />
     </main>
   )
 }

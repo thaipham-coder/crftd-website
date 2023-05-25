@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        '3xl': '1792px',
+      },
       fontFamily: {
         archia: ['var(--font-archia)'],
         sans: ['var(--font-tthoves)'],
