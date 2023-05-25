@@ -11,6 +11,17 @@
   overflow: hidden;
 }
 
+.clipped-corners {
+  clip-path: polygon(
+    6rem 0,
+    100% 0,
+    100% calc(100% - 6rem),
+    calc(100% - 6rem) 100%,
+    0 100%,
+    0 6rem
+  );
+}
+
 ::-moz-selection {
   color: #f2f2f2;
   background: #9b91fa;
