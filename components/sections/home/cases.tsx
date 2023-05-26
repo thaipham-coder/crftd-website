@@ -29,13 +29,13 @@ export default function Cases() {
       //     scrub: 1.5,
       //   },
       // })
-      ScrollTrigger.create({
-        trigger: el.current,
-        start: 'top top',
-        end: 'bottom bottom',
-        pin: '#fixed-cases',
-        pinSpacing: false,
-      })
+      // ScrollTrigger.create({
+      //   trigger: el.current,
+      //   start: 'top top',
+      //   end: 'bottom bottom',
+      //   pin: '#fixed-cases',
+      //   pinSpacing: false,
+      // })
     }, el)
     return () => ctx.revert()
   }, [])

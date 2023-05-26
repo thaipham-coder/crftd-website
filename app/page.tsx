@@ -10,7 +10,7 @@ export default function Home() {
       {/*<Preloader />*/}
       <Landing />
       <Showreel />
-      {/*<Cases />*/}
+      <Cases />
     </main>
   )
 }
