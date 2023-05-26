@@ -2,14 +2,14 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
+import Case from '@/components/partials/case'
+import arrowIcon from '@/public/icons/arrow-right-dark.svg'
+import mika from '@/public/images/BuiteNOM_Exterieur07_LR.jpg'
 
+import useIsomorphicLayoutEffect from '@/components/helpers/isomorphicEffect'
+import { useRef } from 'react'
 import { gsap } from 'gsap/dist/gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { useRef } from 'react'
-import useIsomorphicLayoutEffect from '@/components/helpers/isomorphicEffect'
-import arrowIcon from '@/public/icons/arrow-right-dark.svg'
-import Case from '@/components/partials/case'
-import mika from '@/public/images/BuiteNOM_Exterieur07_LR.jpg'
 
 gsap.registerPlugin(ScrollTrigger)
 
