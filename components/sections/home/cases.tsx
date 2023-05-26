@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { gsap } from 'gsap/dist/gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import ScrollTrigger from 'gsap/ScrollTrigger'
 import { useRef } from 'react'
 import useIsomorphicLayoutEffect from '@/components/helpers/isomorphicEffect'
 import arrowIcon from '@/public/icons/arrow-right-dark.svg'
