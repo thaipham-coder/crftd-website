@@ -24,6 +24,7 @@ export default function Case(props: {
       <Image
         src={props.src}
         alt={`${props.title} thumbnail image`}
+        data-speed="auto"
         className="h-full w-full object-cover object-center md:h-auto md:w-[unset]"
       />
     </Link>
