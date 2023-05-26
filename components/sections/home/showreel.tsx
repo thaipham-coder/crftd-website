@@ -10,7 +10,9 @@ export default function Showreel() {
   useIsomorphicLayoutEffect(() => {
     const ctx = gsap.context(() => {
       gsap.from(el.current, {
-        scale: 0.4,
+        clipPath:
+          'polygon(calc(20% + 6rem) 0%, 80% 0%, 80% calc(80% - 6rem), calc(80% - 6rem) 80%, 20% 80%, 20% 6rem)',
+        scale: 0.6,
         transformOrigin: 'top center',
         scrollTrigger: {
           trigger: el.current,

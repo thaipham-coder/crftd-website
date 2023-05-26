@@ -9,6 +9,7 @@ export default function Landing() {
 
   useIsomorphicLayoutEffect(() => {
     const ctx = gsap.context(() => {
+      gsap.set('#crftd', { autoAlpha: 1 })
       gsap.from('#crftd path', {
         yPercent: 110,
         stagger: 0.06,
@@ -31,6 +32,7 @@ export default function Landing() {
               xmlns="http://www.w3.org/2000/svg"
               id="crftd"
               viewBox="0 0 1080 358.4"
+              className="fouc"
             >
               <path
                 id="c"
