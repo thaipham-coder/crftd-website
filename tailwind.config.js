@@ -10,6 +10,9 @@ module.exports = {
       screens: {
         '3xl': '1792px',
       },
+      aspectRatio: {
+        '3/4': '3 / 4',
+      },
       fontFamily: {
         archia: ['var(--font-archia)'],
         sans: ['var(--font-tthoves)'],

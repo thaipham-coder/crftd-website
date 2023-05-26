@@ -107,12 +107,12 @@ export default function Footer() {
               href="/contact"
               data-type="button"
               className="ia group flex w-fit items-center gap-4"
+              aria-label="Button to contact page"
             >
               <p>Let’s talk</p>
               <button
                 type="button"
                 className="flex h-8 w-8 items-center justify-center before:absolute before:h-8 before:w-8 before:rounded-full before:border before:border-crftd-gray before:transition-all before:duration-300 before:ease-out group-hover:before:h-12 group-hover:before:w-12 group-hover:before:border-0 group-hover:before:bg-crftd-purple"
-                aria-label="Button to contact page"
               >
                 <Image src={arrowIcon} alt="arrow right icon" className="z-0" />
               </button>
