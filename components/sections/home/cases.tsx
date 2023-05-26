@@ -50,7 +50,6 @@ export default function Cases() {
             xmlns="http://www.w3.org/2000/svg"
             id="cases"
             width="1920"
-            height="378.223"
             viewBox="0 0 1920 378.223"
             className="fouc"
           >
