@@ -9,9 +9,6 @@ import mika from '@/public/images/BuiteNOM_Exterieur07_LR.jpg'
 import useIsomorphicLayoutEffect from '@/components/helpers/isomorphicEffect'
 import { useRef } from 'react'
 import { gsap } from 'gsap/dist/gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-
-gsap.registerPlugin(ScrollTrigger)
 
 export default function Cases() {
   const el = useRef<HTMLDivElement>(null)
@@ -60,31 +57,31 @@ export default function Cases() {
             />
           </svg>
         </div>
-        <div className="-mx-4 flex flex-wrap justify-center">
-          <div className="flex w-full flex-col gap-16 px-4 md:w-10/12">
-            <Case
-              title="Boddy"
-              intro="Small actions with a huge impact – a well thought-out website"
-              category="UI-design&nbsp;&nbsp;/&nbsp;&nbsp;UX-design"
-              src={mika}
-              href="/domslim"
-            />
-            <Case
-              title="Boddy"
-              intro="Made the impossible possible – an attactive re-branding"
-              category="branding&nbsp;&nbsp;/&nbsp;&nbsp;webdesign"
-              src={mika}
-              href="/domslim"
-            />
-            <Case
-              title="Boddy"
-              intro="Where automotive meets finesse – accessible app for employees"
-              category="app design&nbsp;&nbsp;/&nbsp;&nbsp;app development"
-              src={mika}
-              href="/domslim"
-            />
-          </div>
-        </div>
+        {/*<div className="-mx-4 flex flex-wrap justify-center">*/}
+        {/*  <div className="flex w-full flex-col gap-16 px-4 md:w-10/12">*/}
+        {/*    <Case*/}
+        {/*      title="Boddy"*/}
+        {/*      intro="Small actions with a huge impact – a well thought-out website"*/}
+        {/*      category="UI-design&nbsp;&nbsp;/&nbsp;&nbsp;UX-design"*/}
+        {/*      src={mika}*/}
+        {/*      href="/domslim"*/}
+        {/*    />*/}
+        {/*    <Case*/}
+        {/*      title="Boddy"*/}
+        {/*      intro="Made the impossible possible – an attactive re-branding"*/}
+        {/*      category="branding&nbsp;&nbsp;/&nbsp;&nbsp;webdesign"*/}
+        {/*      src={mika}*/}
+        {/*      href="/domslim"*/}
+        {/*    />*/}
+        {/*    <Case*/}
+        {/*      title="Boddy"*/}
+        {/*      intro="Where automotive meets finesse – accessible app for employees"*/}
+        {/*      category="app design&nbsp;&nbsp;/&nbsp;&nbsp;app development"*/}
+        {/*      src={mika}*/}
+        {/*      href="/domslim"*/}
+        {/*    />*/}
+        {/*  </div>*/}
+        {/*</div>*/}
         <div className="-mx-4 mt-16 flex justify-center md:mt-24 xl:mt-32">
           <Link
             href="/cases"
