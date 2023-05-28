@@ -14,7 +14,7 @@ export default function Landing() {
         yPercent: 110,
         stagger: 0.06,
         duration: 1,
-        delay: 1,
+        delay: 2,
         ease: 'power3.out',
       })
     }, el)
@@ -60,6 +60,7 @@ export default function Landing() {
                 fill="#f2f2f2"
               />
             </svg>
+
           </div>
         </div>
       </div>

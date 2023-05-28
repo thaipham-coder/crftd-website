@@ -4,6 +4,7 @@ import localFont from 'next/font/local'
 import CustomCursor from '@/components/common/customCursor'
 import SmoothScroller from '@/components/common/smoothScroller'
 import Footer from '@/components/layout/footer'
+import Preloader from '@/components/common/preloader'
 import Navbar from '@/components/layout/navbar'
 
 const archia = localFont({
@@ -49,6 +50,7 @@ export default function RootLayout({
     <html lang="en" className={`${archia.variable} ${tthoves.variable}`}>
       <body className="bg-black">
         <CustomCursor />
+        <Preloader />
         <Navbar />
         <SmoothScroller>
           {children}
