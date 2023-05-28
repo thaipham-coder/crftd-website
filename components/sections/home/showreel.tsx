@@ -9,18 +9,31 @@ export default function Showreel() {
 
   useIsomorphicLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from(el.current, {
-        clipPath:
-          'polygon(calc(20% + 6rem) 0%, 80% 0%, 80% calc(80% - 6rem), calc(80% - 6rem) 80%, 20% 80%, 20% 6rem)',
-        scale: 0.6,
-        transformOrigin: 'top center',
-        scrollTrigger: {
-          trigger: el.current,
-          start: 'top 75%',
-          end: 'bottom 25%',
-          scrub: 1.5,
+      let mm = gsap.matchMedia()
+
+      mm.add(
+        {
+          isMobile: '(max-width: 767px)',
+          isDesktop: '(min-width: 768px)',
         },
-      })
+        (context) => {
+          let isMobile = context.conditions?.isMobile
+
+          gsap.from(el.current, {
+            clipPath: isMobile
+              ? 'polygon(calc(20% + 6rem) 0%, 80% 0%, 80% calc(80% - 6rem), calc(80% - 6rem) 80%, 20% 80%, 20% 6rem)'
+              : 'polygon(calc(20% + 12rem) 0%, 80% 0%, 80% calc(80% - 12rem), calc(80% - 12rem) 80%, 20% 80%, 20% 12rem)',
+            scale: 0.6,
+            transformOrigin: 'top center',
+            scrollTrigger: {
+              trigger: el.current,
+              start: 'top 75%',
+              end: 'bottom 25%',
+              scrub: 1.5,
+            },
+          })
+        },
+      )
     }, el)
     return () => ctx.revert()
   }, [])

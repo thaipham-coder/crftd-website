@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+::-moz-selection {
+    color: #f2f2f2;
+    background: #9b91fa;
+}
+
+::selection {
+    color: #f2f2f2;
+    background: #9b91fa;
+}
+
 .reveal {
   opacity: 0;
   visibility: hidden;
@@ -27,12 +37,15 @@
   );
 }
 
-::-moz-selection {
-  color: #f2f2f2;
-  background: #9b91fa;
-}
-
-::selection {
-  color: #f2f2f2;
-  background: #9b91fa;
+@media (min-width: 768px) {
+  .clipped-corners {
+    clip-path: polygon(
+      calc(0% + 12rem) 0%,
+      100% 0%,
+      100% calc(100% - 12rem),
+      calc(100% - 12rem) 100%,
+      0% 100%,
+      0% 12rem
+    );
+  }
 }
