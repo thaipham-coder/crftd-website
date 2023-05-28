@@ -13,11 +13,11 @@ module.exports = {
       aspectRatio: {
         '3/4': '3 / 4',
       },
-        backgroundImage: {
-            'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-            'gradient-conic':
-                'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic':
+          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      },
       fontFamily: {
         archia: ['var(--font-archia)'],
         sans: ['var(--font-tthoves)'],

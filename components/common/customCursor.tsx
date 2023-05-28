@@ -103,6 +103,9 @@ export default function CustomCursor() {
               hTo(0)
               wTo(0)
               return
+            case 'loader':
+              document.body.style.cursor = 'wait'
+              return
             default:
               return
           }
