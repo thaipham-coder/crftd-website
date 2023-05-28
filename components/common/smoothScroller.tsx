@@ -70,7 +70,7 @@ export default function SmoothScroller({
   }, [pathname])
   return (
     <div id="smooth-wrapper" className="bg-black">
-      <div id="smooth-content" className="will-change-transform">
+      <div id="smooth-content" className="bg-black will-change-transform">
         {children}
       </div>
     </div>

@@ -47,7 +47,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${archia.variable} ${tthoves.variable}`}>
-      <body>
+      <body className="bg-black">
         <CustomCursor />
         <Navbar />
         <SmoothScroller>
