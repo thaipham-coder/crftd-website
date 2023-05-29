@@ -10,6 +10,22 @@ export default function Preloader() {
 
   useIsomorphicLayoutEffect(() => {
     const ctx = gsap.context(() => {
+        gsap.set('p', {
+            autoAlpha: 1,
+        })
+        gsap.from('p', {
+            yPercent: 100,
+            duration: 0.6,
+            ease: 'power3.out',
+        })
+      gsap.to('p', {
+        innerText: '100%',
+        snap: {
+          innerText: 4,
+        },
+          ease: 'power3.out',
+          duration: 3,
+      })
       const tl = gsap
         .timeline({
           onStart: () => {
@@ -67,8 +83,11 @@ export default function Preloader() {
       {/*<div id="kleine" className="  absolute h-[480px] w-[480px] -translate-x-1/3  rounded-full bg-gradient-to-br from-transparent to-crftd-purple opacity-20 blur-2xl lg:h-[360px] "></div>*/}
       <div
         id="grote"
-        className="fouc absolute rounded-full bg-gradient-conic from-crftd-purple blur-xl will-change-[filter]"
+        className="fouc absolute rounded-full bg-gradient-conic from-crftd-purple via-crftd-purple-dark blur-xl will-change-[filter]"
       ></div>
+        <div className="lp absolute md:bottom-12 right-6 md:right-12">
+      <p className="text-2xl bottom-6  leading-none fouc text-crftd-white font-archia">0%</p>
+        </div>
     </div>
   )
 }
