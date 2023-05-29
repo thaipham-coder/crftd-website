@@ -10,21 +10,21 @@ export default function Preloader() {
 
   useIsomorphicLayoutEffect(() => {
     const ctx = gsap.context(() => {
-        gsap.set('p', {
-            autoAlpha: 1,
-        })
-        gsap.from('p', {
-            yPercent: 100,
-            duration: 0.6,
-            ease: 'power3.out',
-        })
+      gsap.set('p', {
+        autoAlpha: 1,
+      })
+      gsap.from('p', {
+        yPercent: 100,
+        duration: 0.6,
+        ease: 'power3.out',
+      })
       gsap.to('p', {
         innerText: '100%',
         snap: {
           innerText: 4,
         },
-          ease: 'power3.out',
-          duration: 3,
+        ease: 'power3.out',
+        duration: 3,
       })
       const tl = gsap
         .timeline({
@@ -85,9 +85,11 @@ export default function Preloader() {
         id="grote"
         className="fouc absolute rounded-full bg-gradient-conic from-crftd-purple via-crftd-purple-dark blur-xl will-change-[filter]"
       ></div>
-        <div className="lp absolute md:bottom-12 right-6 md:right-12">
-      <p className="text-2xl bottom-6  leading-none fouc text-crftd-white font-archia">0%</p>
-        </div>
+      <div className="lp absolute bottom-6 right-6 md:bottom-12 md:right-12">
+        <p className="fouc font-archia text-2xl leading-none text-crftd-white">
+          0%
+        </p>
+      </div>
     </div>
   )
 }
