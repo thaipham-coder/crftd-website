@@ -83,9 +83,9 @@ export default function Preloader() {
       {/*<div id="kleine" className="  absolute h-[480px] w-[480px] -translate-x-1/3  rounded-full bg-gradient-to-br from-transparent to-crftd-purple opacity-20 blur-2xl lg:h-[360px] "></div>*/}
       <div
         id="grote"
-        className="fouc fixed md:absolute rounded-full bg-gradient-conic from-crftd-purple via-crftd-purple-dark blur-xl will-change-[filter]"
+        className="fouc absolute rounded-full bg-gradient-conic from-crftd-purple via-crftd-purple-dark blur-xl will-change-[filter]"
       ></div>
-      <div className="lp absolute bottom-6 right-6 md:bottom-12 md:right-12">
+      <div className="lp fixed md:absolute bottom-6 right-6 md:bottom-12 md:right-12">
         <p className="fouc font-archia text-2xl leading-none text-crftd-white">
           0%
         </p>
