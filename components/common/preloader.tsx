@@ -78,14 +78,14 @@ export default function Preloader() {
       aria-busy="true"
       aria-label="Loading"
       data-type="loader"
-      className="ia fixed inset-0 z-50 flex h-screen w-full items-center justify-center bg-black"
+      className="ia fixed inset-0 z-50 flex h-[100dvh] w-full items-center justify-center bg-black"
     >
       {/*<div id="kleine" className="  absolute h-[480px] w-[480px] -translate-x-1/3  rounded-full bg-gradient-to-br from-transparent to-crftd-purple opacity-20 blur-2xl lg:h-[360px] "></div>*/}
       <div
         id="grote"
         className="fouc absolute rounded-full bg-gradient-conic from-crftd-purple via-crftd-purple-dark blur-xl will-change-[filter]"
       ></div>
-      <div className="lp fixed md:absolute bottom-6 right-6 md:bottom-12 md:right-12">
+      <div className="lp absolute bottom-6 right-6 md:bottom-12 md:right-12">
         <p className="fouc font-archia text-2xl leading-none text-crftd-white">
           0%
         </p>
