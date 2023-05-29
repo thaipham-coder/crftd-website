@@ -32,17 +32,31 @@ export default function Preloader() {
             document.body.style.overflow = 'hidden'
           },
         })
+          .to('#kleine', {
+            width: 2400,
+            height: 1800,
+            filter: 'blur(96px)',
+            rotate: -135,
+            autoAlpha: 0.2,
+            ease: 'power3.out',
+            duration: 6,
+          })
         .to('#grote', {
           width: 480,
           height: 360,
           filter: 'blur(64px)',
           rotate: 45,
           autoAlpha: 0.8,
-          ease: 'power3.out',
+          // ease: 'power3.out',
+            ease: "back.out(3)",
           duration: 2,
-        })
+
+        }, '<+=1')
         .to('#grote', {
-          scale: 10,
+            width: 4800,
+            height: 3600,
+            rotate: 135,
+            filter: 'blur(96px)',
           duration: 1,
           ease: 'power3.inOut',
         })
@@ -80,7 +94,7 @@ export default function Preloader() {
       data-type="loader"
       className="ia fixed inset-0 z-50 flex h-[100dvh] w-full items-center justify-center bg-black"
     >
-      {/*<div id="kleine" className="  absolute h-[480px] w-[480px] -translate-x-1/3  rounded-full bg-gradient-to-br from-transparent to-crftd-purple opacity-20 blur-2xl lg:h-[360px] "></div>*/}
+      <div id="kleine" className="fouc absolute rounded-full bg-gradient-to-br from-transparent to-crftd-purple  will-change-[filter]"></div>
       <div
         id="grote"
         className="fouc absolute rounded-full bg-gradient-conic from-crftd-purple via-crftd-purple-dark blur-xl will-change-[filter]"
