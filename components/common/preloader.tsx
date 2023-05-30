@@ -5,12 +5,16 @@ import useIsomorphicLayoutEffect from '@/components/helpers/isomorphicEffect'
 import { useRef } from 'react'
 import { gsap } from 'gsap'
 
+/**
+ * A component that displays a preloader animation on initial page load which hides itself when the content below is ready.
+ */
+
 export default function Preloader() {
   const el = useRef<HTMLDivElement>(null)
 
   useIsomorphicLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.set('p', {
+      gsap.set('#info', {
         autoAlpha: 1,
       })
       gsap.from('p', {
@@ -18,7 +22,7 @@ export default function Preloader() {
         duration: 0.6,
         ease: 'power3.out',
       })
-      gsap.to('#count', {
+      gsap.to('#progress', {
         innerText: '100%',
         snap: {
           innerText: 4,
@@ -33,7 +37,7 @@ export default function Preloader() {
             document.body.style.cursor = 'wait'
           },
         })
-        .to('#kleine', {
+        .to('#smallBlob', {
           width: 2400,
           height: 1800,
           filter: 'blur(96px)',
@@ -43,7 +47,7 @@ export default function Preloader() {
           duration: 6,
         })
         .to(
-          '#grote',
+          '#largeBlob',
           {
             width: 480,
             height: 360,
@@ -56,7 +60,7 @@ export default function Preloader() {
           '<+=0.8',
         )
         .to(
-          '#grote',
+          '#largeBlob',
           {
             width: 4800,
             height: 3600,
@@ -93,22 +97,19 @@ export default function Preloader() {
       className="ia fixed inset-0 z-50 flex h-[100dvh] w-full items-center justify-center bg-black"
     >
       <div
-        id="kleine"
-        className="fouc absolute rounded-full bg-gradient-to-br from-transparent to-crftd-purple  will-change-[filter]"
+        id="smallBlob"
+        className="fouc absolute rounded-full bg-gradient-to-br from-transparent to-crftd-purple will-change-[filter]"
       ></div>
       <div
-        id="grote"
-        className="fouc absolute rounded-full bg-gradient-conic from-crftd-purple via-crftd-purple-dark blur-xl will-change-[filter]"
+        id="largeBlob"
+        className="fouc absolute rounded-full bg-gradient-conic from-crftd-purple via-crftd-purple-dark will-change-[filter]"
       ></div>
-        <div className="lp absolute bottom-6 left-6 md:bottom-12 md:left-12">
-            <p className="fouc font-archia text-2xl leading-none text-crftd-white">
-                crftd
-            </p>
-        </div>
-      <div className="lp absolute bottom-6 right-6 md:bottom-12 md:right-12">
-        <p id="count" className="fouc font-archia text-2xl leading-none text-crftd-white">
-          0%
-        </p>
+      <div
+        id="info"
+        className="fouc lp absolute bottom-6 left-6 right-6 flex justify-between font-archia text-2xl leading-none text-crftd-white md:bottom-12 md:left-12 md:right-12"
+      >
+        <p>crftd</p>
+        <p id="progress">0%</p>
       </div>
     </div>
   )

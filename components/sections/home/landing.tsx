@@ -14,7 +14,7 @@ export default function Landing() {
         yPercent: 110,
         stagger: 0.06,
         duration: 1,
-        delay: 2.4,
+        delay: 3.8,
         ease: 'power3.out',
       })
     }, el)
