@@ -1,4 +1,7 @@
+'use client'
+
 import Clock from 'react-live-clock'
+import { useEffect, useState } from 'react'
 
 /**
  * A component that displays a live clock with the current time in the 'Europe/Amsterdam' timezone.
@@ -6,12 +9,18 @@ import Clock from 'react-live-clock'
  */
 
 export default function LiveClock() {
-  return (
+  const [shouldRender, setShouldRender] = useState(false)
+
+  useEffect(() => {
+    setShouldRender(true)
+  }, [])
+
+  return shouldRender ? (
     <Clock
       format="LT"
       ticking={true}
       timezone={'Europe/Amsterdam'}
       className="lowercase"
     />
-  )
+  ) : null
 }
