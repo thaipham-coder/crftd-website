@@ -1,23 +1,16 @@
 'use client'
 
-import {useRef} from "react";
+import { useEffect } from "react";
+import { useRouter } from 'next/navigation';
 
 export default function Qr() {
-    const btn = useRef<HTMLButtonElement>(null)
-    const stt = () => {
-        const URL = 'https://www.crftd.nl/vcards/olavsajtos-vcard.vcf'
-        if (typeof window !== "undefined"){
-            window.location.href = URL
-        }
-    }
-  return (
-      <main>
-<h1 className="text-crftd-white">QR</h1>
-          <button
-              ref={btn}
-                onClick={stt}
-              className="text-crftd-white"
-          >test</button>
-      </main>
-  )
+    const router = useRouter();
+
+    useEffect(() => {
+        window.location.href = 'https://www.crftd.nl/vcards/olavsajtos-vcard.vcf'
+        setTimeout(() => {
+            router.push('/')
+        }, 1000)
+    }, []);
+    return null;
 }
