@@ -8,7 +8,9 @@ export default function Qr() {
 
   useEffect(() => {
     window.location.href = 'https://www.crftd.nl/vcards/olavsajtos-vcard.vcf'
-    router.push('/')
+    setTimeout(() => {
+      router.push('/')
+    }, 1000)
   }, [])
   return null
 }
