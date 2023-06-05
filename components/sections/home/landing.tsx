@@ -61,19 +61,6 @@ export default function Landing() {
               />
             </svg>
           </div>
-          <div className="flex w-full items-end px-4 md:w-5/12">
-            <p>
-              Tijdelijke disclaimer, deze website is volop in ontwikkeling.
-              Bekijk{' '}
-              <a
-                className="text-crftd-purple"
-                href="https://github.com/olavgit/crftd-website"
-              >
-                hier
-              </a>{' '}
-              de repo.
-            </p>
-          </div>
         </div>
       </div>
     </section>

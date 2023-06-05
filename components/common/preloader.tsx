@@ -38,10 +38,10 @@ export default function Preloader() {
           },
         })
         .set('#smallBlob', {
-          filter: 'blur(96px)',
+          // filter: 'blur(96px)',
         })
         .set('#largeBlob', {
-          filter: 'blur(64px)',
+          // filter: 'blur(64px)',
         })
         .to('#smallBlob', {
           width: 2400,
@@ -69,7 +69,7 @@ export default function Preloader() {
             width: 4800,
             height: 3600,
             rotate: 90,
-            filter: 'blur(128px)',
+            // filter: 'blur(128px)',
             duration: 1.6,
             ease: 'power3.inOut',
           },
@@ -86,7 +86,7 @@ export default function Preloader() {
               document.body.style.cursor = 'auto'
             },
           },
-          '<+=0.8',
+          '<+=0.7',
         )
     }, el)
     return () => ctx.revert()
@@ -106,7 +106,7 @@ export default function Preloader() {
       ></div>
       <div
         id="largeBlob"
-        className="fouc absolute rounded-full bg-gradient-conic from-crftd-purple via-crftd-purple-dark will-change-[filter]"
+        className="fouc absolute rounded-full bg-gradient-to-br from-crftd-purple via-crftd-purple-dark will-change-[filter]"
       ></div>
       <div
         id="info"
