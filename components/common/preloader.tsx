@@ -37,10 +37,15 @@ export default function Preloader() {
             document.body.style.cursor = 'wait'
           },
         })
+        .set('#smallBlob', {
+          filter: 'blur(96px)',
+        })
+        .set('#largeBlob', {
+          filter: 'blur(64px)',
+        })
         .to('#smallBlob', {
           width: 2400,
           height: 1800,
-          filter: 'blur(96px)',
           rotate: -135,
           autoAlpha: 0.2,
           ease: 'power3.out',
@@ -51,7 +56,6 @@ export default function Preloader() {
           {
             width: 480,
             height: 360,
-            filter: 'blur(64px)',
             rotate: 45,
             autoAlpha: 0.8,
             ease: 'back.out(3)',
@@ -65,7 +69,7 @@ export default function Preloader() {
             width: 4800,
             height: 3600,
             rotate: 90,
-            filter: 'blur(256px)',
+            filter: 'blur(128px)',
             duration: 1.6,
             ease: 'power3.inOut',
           },
