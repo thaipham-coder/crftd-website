@@ -29,7 +29,7 @@ export default function Disclaimer() {
         style={customStyles}
       >
         <div className="flex flex-col items-center">
-          <p className="mb-2 text-xl text-center">
+          <p className="mb-2 text-center text-xl">
             🚧 &nbsp;Deze website is volop in ontwikkeling. &nbsp;🚧
           </p>
           <p className="mb-8">

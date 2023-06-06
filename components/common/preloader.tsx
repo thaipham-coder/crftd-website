@@ -37,17 +37,11 @@ export default function Preloader() {
             document.body.style.cursor = 'wait'
           },
         })
-        .set('#smallBlob', {
-          // filter: 'blur(96px)',
-        })
-        .set('#largeBlob', {
-          // filter: 'blur(64px)',
-        })
         .to('#smallBlob', {
           width: 2400,
           height: 1800,
           rotate: -135,
-          autoAlpha: 0.2,
+          autoAlpha: 0.25,
           ease: 'power3.out',
           duration: 6,
         })
@@ -57,7 +51,7 @@ export default function Preloader() {
             width: 480,
             height: 360,
             rotate: 45,
-            autoAlpha: 0.8,
+            autoAlpha: 1,
             ease: 'back.out(3)',
             duration: 2,
           },
@@ -69,7 +63,6 @@ export default function Preloader() {
             width: 4800,
             height: 3600,
             rotate: 90,
-            // filter: 'blur(128px)',
             duration: 1.6,
             ease: 'power3.inOut',
           },
@@ -108,6 +101,7 @@ export default function Preloader() {
         id="largeBlob"
         className="fouc absolute rounded-full bg-gradient-to-br from-crftd-purple via-crftd-purple-dark will-change-[filter]"
       ></div>
+      <div className="fixed inset-0 backdrop-blur-[80px]"></div>
       <div
         id="info"
         className="fouc lp absolute bottom-6 left-6 right-6 flex justify-between font-archia text-2xl leading-none text-crftd-white md:bottom-12 md:left-12 md:right-12"
