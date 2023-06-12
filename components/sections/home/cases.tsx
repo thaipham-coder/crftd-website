@@ -18,6 +18,13 @@ export default function Cases() {
 
   useIsomorphicLayoutEffect(() => {
     const ctx = gsap.context(() => {
+      ScrollTrigger.create({
+        trigger: el.current,
+        start: 'top top',
+        end: 'bottom bottom',
+        pin: '#fixed-cases',
+        pinSpacing: false,
+      })
       gsap.set('#cases', { autoAlpha: 1 })
       gsap.from('#cases path', {
         yPercent: 100,
@@ -25,16 +32,8 @@ export default function Cases() {
           trigger: el.current,
           start: '10% 75%',
           end: '25% 75%',
-          id: 'cases',
           scrub: 1.5,
         },
-      })
-      ScrollTrigger.create({
-        trigger: el.current,
-        start: 'top top',
-        end: 'bottom bottom',
-        pin: '#fixed-cases',
-        pinSpacing: false,
       })
     }, el)
     return () => ctx.revert()
@@ -44,7 +43,7 @@ export default function Cases() {
       <div className="container mx-auto px-8 md:px-4">
         <div
           id="fixed-cases"
-          className="pointer-events-none flex h-screen items-center justify-center"
+          className="pointer-events-none flex h-[100dvh] items-center justify-center"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

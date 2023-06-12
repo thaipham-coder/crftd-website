@@ -26,7 +26,6 @@ export default function Footer() {
           trigger: el.current,
           start: 'top bottom',
           end: 'top 40%',
-          id: 'footer',
           scrub: 1.5,
         },
       })
