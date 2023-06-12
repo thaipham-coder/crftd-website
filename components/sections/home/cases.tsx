@@ -4,7 +4,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Case from '@/components/partials/case'
 import arrowIcon from '@/public/icons/arrow-right-dark.svg'
-import mika from '@/public/images/BuiteNOM_Exterieur07_LR.jpg'
+import placeholder1 from '@/public/images/placeholder-1.jpg'
+import placeholder2 from '@/public/images/placeholder-2.jpg'
+import placeholder3 from '@/public/images/placeholder-3.jpg'
+
 
 import useIsomorphicLayoutEffect from '@/components/helpers/isomorphicEffect'
 import { useRef } from 'react'
@@ -65,21 +68,21 @@ export default function Cases() {
               title="Boddy"
               intro="Small actions with a huge impact – a well thought-out website"
               category="UI-design&nbsp;&nbsp;/&nbsp;&nbsp;UX-design"
-              src={mika}
+              src={placeholder1}
               href="/domslim"
             />
             <Case
               title="Boddy"
               intro="Made the impossible possible – an attactive re-branding"
               category="branding&nbsp;&nbsp;/&nbsp;&nbsp;webdesign"
-              src={mika}
+              src={placeholder2}
               href="/domslim"
             />
             <Case
               title="Boddy"
               intro="Where automotive meets finesse – accessible app for employees"
               category="app design&nbsp;&nbsp;/&nbsp;&nbsp;app development"
-              src={mika}
+              src={placeholder3}
               href="/domslim"
             />
           </div>
