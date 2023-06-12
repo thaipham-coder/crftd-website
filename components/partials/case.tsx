@@ -27,7 +27,7 @@ export default function Case(props: {
         },
       })
 
-      let hoverAnimation = gsap.timeline().fromTo(
+      let hoverAnimation = gsap.timeline({ paused: true }).fromTo(
         el.current,
         {
           clipPath:
@@ -43,14 +43,10 @@ export default function Case(props: {
 
       if (el.current) {
         el.current.addEventListener('mouseenter', () => {
-          if (hoverAnimation) {
-            hoverAnimation.play()
-          }
+          hoverAnimation.play()
         })
         el.current.addEventListener('mouseleave', () => {
-          if (hoverAnimation) {
-            hoverAnimation.reverse()
-          }
+          hoverAnimation.reverse()
         })
       }
     }, el)
