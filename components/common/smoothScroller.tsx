@@ -45,6 +45,9 @@ export default function SmoothScroller({
     existingTriggers.forEach((t) => t.revert(true, true))
 
     ctx.current = gsap.context((self) => {
+      const smoothContentDiv = document.getElementById('smooth-content')
+      smoothContentDiv.classList.add('will-change-transform')
+
       smoother.current = ScrollSmoother.create({
         smooth: 1,
         effects: true,
@@ -70,9 +73,7 @@ export default function SmoothScroller({
   }, [pathname])
   return (
     <div id="smooth-wrapper">
-      <div id="smooth-content" className=" will-change-transform">
-        {children}
-      </div>
+      <div id="smooth-content">{children}</div>
     </div>
   )
 }
