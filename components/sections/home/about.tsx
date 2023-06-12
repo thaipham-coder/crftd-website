@@ -28,7 +28,7 @@ export default function About() {
   return (
     <section
       ref={el}
-      className="bg-black pb-16 pt-16 text-crftd-white md:pb-24 md:pt-24 xl:pb-32 xl:pt-32"
+      className="bg-black overflow-hidden pb-16 pt-16 text-crftd-white md:pb-24 md:pt-24 xl:pb-32 xl:pt-32"
     >
       <div className="container mx-auto flex flex-col gap-12 px-8 md:gap-24 md:px-4">
         <div className="-mx-4 flex flex-wrap justify-center">
@@ -44,7 +44,7 @@ export default function About() {
         <div className="-mx-4 flex flex-wrap justify-center">
           <div className="w-full px-4">
             <h2 className="aboutTitle whitespace-nowrap font-archia lowercase">
-              About crftd / About crftd / About crftd / About crftd
+              About crftd / About crftd /
             </h2>
           </div>
         </div>
