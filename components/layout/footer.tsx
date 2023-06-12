@@ -59,7 +59,7 @@ export default function Footer() {
   return (
     <footer
       ref={el}
-      className="bg-black pb-6 pt-16 text-crftd-white before:pointer-events-none md:pb-12 md:pt-24 xl:pt-32"
+      className="bg-black pb-6 pt-16 text-crftd-white md:pb-12 md:pt-24 xl:pt-32"
     >
       <div className="container mx-auto px-8 md:px-4">
         <div className="md:mb-18 -mx-4 mb-12 flex flex-wrap justify-between xl:mb-24">

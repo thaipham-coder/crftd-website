@@ -23,7 +23,7 @@ export default function Landing() {
   return (
     <section
       ref={el}
-      className="flex min-h-[60vh] items-end bg-black pb-8 text-crftd-white md:pb-16"
+      className="flex min-h-[75vh] items-end bg-black pb-12 text-crftd-white md:pb-24"
     >
       <div className="container mx-auto px-8 md:px-4">
         <div className="-mx-4 flex flex-wrap">

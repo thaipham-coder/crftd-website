@@ -21,9 +21,9 @@ export default function Showreel() {
 
           gsap.from(el.current, {
             clipPath: isMobile
-              ? 'polygon(calc(20% + 6rem) 0%, 80% 0%, 80% calc(80% - 6rem), calc(80% - 6rem) 80%, 20% 80%, 20% 6rem)'
+              ? 'polygon(calc(20% + 4rem) 0%, 80% 0%, 80% calc(80% - 4rem), calc(80% - 4rem) 80%, 20% 80%, 20% 4rem)'
               : 'polygon(calc(20% + 12rem) 0%, 80% 0%, 80% calc(80% - 12rem), calc(80% - 12rem) 80%, 20% 80%, 20% 12rem)',
-            scale: 0.6,
+            scale: isMobile ? 0.8 : 0.6,
             transformOrigin: 'top center',
             scrollTrigger: {
               trigger: el.current,
@@ -39,11 +39,10 @@ export default function Showreel() {
   }, [])
 
   return (
-    <section ref={el} className="clipped-corners aspect-video">
+    <section ref={el} className="clipped-corners aspect-3/4 md:aspect-video">
       <iframe
         src="https://player.vimeo.com/video/829920535?controls=0&autoplay=1&loop=1&muted=1&title=0&autopause=0&background=1"
         className="pointer-events-none h-full w-full"
-        allowFullScreen
       />
     </section>
   )
