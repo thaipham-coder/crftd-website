@@ -34,7 +34,6 @@ export default function Case(props: {
             'polygon(0rem 0%, 100% 0%, 100% calc(100% - 0rem), calc(100% - 0rem) 100%, 0% 100%, 0% 0rem)',
         },
         {
-          scale: 0.96,
           clipPath:
             'polygon(6rem 0%, 100% 0%, 100% calc(100% - 6rem), calc(100% - 6rem) 100%, 0% 100%, 0% 6rem)',
           ease: 'power3.out',
