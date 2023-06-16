@@ -1,6 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="9.6" viewBox="0 0 24 9.6">
-  <g id="hamburger" transform="translate(28 29)">
-    <path id="top" d="M2,11H26v2.4H2Z" transform="translate(-30 -40)" fill="#F2F2F2" />
-    <path id="bottom" d="M2,17H26v2.4H2Z" transform="translate(-30 -38.8)" fill="#F2F2F2" />
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="9.6" viewBox="0 0 24 9.6"><g id="hamburger" transform="translate(28 29)"><path id="top" fill="#F2F2F2" d="M2,11H26v2.4H2Z" transform="translate(-30 -40)"/><path id="bottom" fill="#F2F2F2" d="M2,17H26v2.4H2Z" transform="translate(-30 -38.8)"/></g></svg>
